@@ -2,26 +2,38 @@
 include "cabecalho.php";
 include "conexao.php";
 
-$id = $_GET["id"];
-$nome = "nome";
-$tipo = "tipo";
-$foto = "foto";
-$sql = "select * from tb_pokemon where id = $id";
+$id = $_GET['id'];
+$nome_cliente = 'nome_cliente';
+$endereco = 'endereco';
+$telefone = 'telefone';
+$servicos = 'servicos';
+$materiais = 'materiais';
+$valor_mao_de_obra = 'valor_mao_de_obra';
+$valor_materiais = 'valor_materiais';
+$tempo_previsto = 'tempo_previsto';
+
+$sql = "select * from tb_orcamentos where id = $id";
+
 $resultado = mysqli_query($conexao, $sql);
-while($umPokemon = mysqli_fetch_assoc($resultado)):
-    $nome = $umPokemon['nome'];
-    $tipo = $umPokemon['tipo'];
-    $foto = $umPokemon['foto'];
+while($umOrçamento = mysqli_fetch_assoc($resultado)):
+    $nome_cliente = $umOrçamento['nome_cliente'];
+    $endereco = $umOrçamento['endereco'];
+    $telefone = $umOrçamento['telefone'];
+    $servicos = $umOrçamento['servicos'];
+    $materiais = $umOrçamento['materiais'];
+    $valor_mao_de_obra = $umOrçamento['valor_mao_de_obra'];
+    $valor_materiais = $umOrçamento['valor_materiais'];
+    $tempo_previsto = $umOrçamento['tempo_previsto'];
 endwhile;    
 ?>
-<h2>Visualizando pokemon número <?=$id;?></h2>
+<h2>Visualizando Orçamento número <?=$id;?></h2>
 <div class="row">
     <div class="col">
-        <img src="img/<?=$foto;?>" alt="<?=$foto;?>" class="img-fluid">
+        <h1><?=$nome_cliente?></h3>
     </div>
     <div class="col">
-        <h3><?=$nome?></h3>
-        <h4><?=$tipo?></h4>
+        <h3><?=$endereco?></h3>
+        <h4><?=$telefone?></h4>
     </div>
 </div>
 <a href="admin.php">Voltar</a>
