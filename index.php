@@ -1,62 +1,21 @@
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php include "cabecalho.php"; ?>
 
-    <link rel="stylesheet" href="style.css">
+<form>
     
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
-    
-
-    <title>Orçamentos de Pintura</title>
-</head>
-<body>
-    <?php
-    include "conexao.php";
-    $id = $_GET['id'] ?? 1;
-    $nome = "nome do pokemon";
-    $foto = "foto do pokemon";
-    $proximo = $id + 1;
-    $anterior = $id - 1;
-    if($anterior < 1){
-        $anterior = 1;
-    }
-
-    $sql = "select * from tb_pokemon where id = $id";
-    $resultado = mysqli_query($conexao, $sql);
-    while($umPokemon = mysqli_fetch_assoc($resultado)):
-        $nome = $umPokemon['nome'];
-        $foto = $umPokemon['foto'];
-    endwhile;
-
-    ?>
-    <main>
-        <img src="img/<?=$foto;?>" 
-        alt="<?=$foto;?>" 
-        class="pokemon_image">
-            
-        <h1 class="pokemon_data">
-            <span class="pokemon_number"></span><?=$id;?> -
-            <span class="pokemon_name"><?=$nome;?></span>
-        </h1>
-
-        <!-- <form>
-            <input type="search"
-            class="input_search"
-            placeholder="Name or Number"
-            required>
-        </form> -->
-
-        <div class="buttons">
-            <a href="index.php?id=<?=$anterior?>" class="button btn-prev">&lt; Prev </a>
-            <a href="index.php?id=<?=$proximo?>" class="button btn-next">Next &gt;</a>
-        </div>
-        
-
-        <img src="img/pokedex.png" alt="pokedex" class="pokedex">
-    </main>
-
-</body>
-</html>
+<?php include "rodape.php" ?>

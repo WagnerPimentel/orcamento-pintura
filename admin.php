@@ -1,6 +1,5 @@
 <?php include "cabecalho.php"; ?>
 
-<h2>Ambiente Administrativo</h2>
 <a href="form-inserir.php" class="btn btn-primary">NOVO ORÇAMENTO</a>
 
 <?php include "conexao.php"; ?>
