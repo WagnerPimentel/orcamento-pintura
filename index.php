@@ -1,28 +1,19 @@
-<?php include "cabecalho.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<form>
-  <div class="row g-3">  
-    <div class="col-md-6">
-      <label class="form-label">Email</label>
-      <input type="email" name="nome_usuario" class="form-control">
+<div class="bg-danger p-5 position-absolute start-50 top-50 translate-middle h-25 w-100">
 
-    <div id="emailHelp" class="form-text"></div>
-    </div>
-    <div class="col-md-6">
-      <label class="form-label">Senha</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="col-md-12">
-      <input type="checkbox" class="form-check-input">
-      <label class="form-check-label" for="exampleCheck1">Lembrar de Login e senha</label>
-    </div>
-    <br> <br>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</div>
 
-<div class="col-md-6">
-        <input type="text" name="nome_cliente" placeholder="Nome do cliente" class="form-control">
-    </div>
-
-<?php include "rodape.php" ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
