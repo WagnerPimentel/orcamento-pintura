@@ -1,6 +1,6 @@
 <?php include "cabecalho.php"; ?>
 
-<a href="form-inserir.php" class="btn btn-primary">NOVO ORÇAMENTO</a>
+<a href="form-inserir.php" class="btn btn-light">NOVO ORÇAMENTO</a>
 
 <?php include "conexao.php"; ?>
 
@@ -26,9 +26,9 @@
                 <td><?=$umCliente['endereco'];?></td>
                 <td><?=$umCliente['telefone'];?></td>
                 <td>
-                    <a href="form-alterar.php?id=<?=$umCliente['id'];?>">Editar</a>
-                    <a href="excluir.php?id=<?=$umCliente['id'];?>">Excluir</a>
-                    <a href="visualizar.php?id=<?=$umCliente['id'];?>">Ver</a>
+                    <a type="button" class="btn btn-info" href="form-alterar.php?id=<?=$umCliente['id'];?>">Editar</a>
+                    <a type="button" class="btn btn-info" href="excluir.php?id=<?=$umCliente['id'];?>">Excluir</a>
+                    <a type="button" class="btn btn-info" href="visualizar.php?id=<?=$umCliente['id'];?>">Ver</a>
                 </td>
             </tr>
         <?php endwhile; 

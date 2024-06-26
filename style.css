@@ -6,16 +6,23 @@
 }
 
 body {
-    text-align: center;
-    background: linear-gradient(to bottom, #8df092, #dcffa4);
-    min-height: 100vh;
-    padding: 15px;
+    background-color: #ffffff;
 }
 
-main {
-    display: inline-block;
-    margin-top: 2%;
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
     padding: 15px;
-    position: relative;
-}
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
 
